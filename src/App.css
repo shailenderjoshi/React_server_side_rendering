@@ -1,38 +1,198 @@
-.App {
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.row{
+  background-color: #f2f2f2;
+  display: table;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.col_left{
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background-color: #f2f2f2;
+  display: table-cell;
+}
+
+.col_right{
+  float: left;
+  width: 80%;
+  padding: 10px;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  display: table-cell;
+  position: relative;
+  min-height: 200px;
+}
+
+.filter{
+  font-weight: bold;
+  padding-left: 10px;
+}
+.filter_col{
+  background-color: white;
+  width: 100%;
+}
+
+.product_col{
+  background-color: white;
+  width: 23%;
+  float: left;
+  margin-top: 22px;
+  margin-left: 20px;
+  border-radius: 8px;
+  padding: 10px;
+  
+}
+.prod_img{
+  width: 100%;
+  height: 200px;
+  background-color: #f2f2f2;
+}
+.prod_img img{
+  width: 100%;
+  height: 100%;
+}
+
+/*  Filter CSS */
+.filter_heading{
+  clear: both;
+  width: 65%;
+  margin: 0 auto;
+  border-bottom: 1px solid black;
   text-align: center;
+  padding: 3px;
+}
+.button_filter_container{
+  width: 90%;
+  margin: 0 auto;
+  clear: both;
+  overflow: auto;
+  padding-bottom: 30px;
+}
+.button_filter_container_left{
+  float: left;
+  width: 50%;
+  text-align: left; 
+  padding: 10px;
+}
+.button_filter_container_right{
+  float: right;
+  width: 50%;
+  text-align: right; 
+  padding: 10px;
+ }
+.year_button{
+  background-color: #c4e097;
+  border: 0px;
+  width: 90px;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.active_button{
+  background-color: #7bb800;
+  border: 0px;
+  padding: 5px;
+  border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.prod_detail{
+  font-size: 12px;
+  color: #929291;
+}
+.prod_detail span{
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 0px;
+}
+.prod_detail li{
+  margin-left: 15px;
+}
+.blue{
+  font-size: 12px;
+  color: #4d508f;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.no_content{
+  position: absolute;
+  font-size: 21px;
+  width: 320px;
+  height: 80px;
+  top: 50%;
+  left: 50%;
+  margin-left: -160px;
+}
+.loading_content{
+  position: absolute;
+  font-size: 26px;
+  font-weight: bold;
+  width: 200px;
+  height: 80px;
+  top: 50%;
+  left: 50%;
+  margin-left: -100px;
+}
+
+.footer{
+  clear: both;
+  text-align: center;
+  padding: 10px;
+}
+
+@media only screen and ( min-width: 700px ) and ( max-width : 1024px){
+  .col_left{
+    width: 40%;
+  }
+  .col_right{
+    width: 60%;
+  }
+  .product_col{
+    width: 90%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and ( max-width : 699px ){
+  .col_left{
+    margin-left: 20px;
+    width: 94%;
+    padding: 10px;
+    background-color: #f2f2f2;
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+  .year_button{
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
   }
+  .col_right{
+    width: 100%;
+  }
+  .product_col{
+    width: 94%;
+  }
+  .year_button{
+    display: block;
+  }
+  .button_filter_container_left{
+    text-align: center; 
+  }
+  .button_filter_container_right{
+    text-align: center; 
+  }
+  
 }
