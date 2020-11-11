@@ -26,11 +26,11 @@ function App() {
     setLoading(true);
     fetch('https://api.spacexdata.com/v3/launches?limit=100')
     .then( res => res.json())
-    .then( data => {
+    .then( data => { 
         setDataArr([data]);
         setLoading(false);
     });
-  }, []);
+  }, []);   
 
   useEffect(() => {
     let queryString = '';
@@ -38,7 +38,7 @@ function App() {
       queryString = '&launch_success='+launchSuccess;
     }
     if( landSuccess !== 'NO' ) {
-      queryString += '&land_success='+launchSuccess;
+      queryString += '&land_success='+landSuccess;
     }
     if( launchYear !== 'NO' ) {
       queryString += '&launch_year='+launchYear;
@@ -120,8 +120,8 @@ function App() {
                   ))}
                 </p>
                 <p className="prod_detail"><span>Launch Year: </span> {val.launch_year}</p>
-                <p className="prod_detail"><span>Successfull Launch:</span> {(val.launch_success === true) ? 'Launch_Success' : 'false'}</p>
-                <p className="prod_detail"><span>Successfull Landing:</span></p>
+                <p className="prod_detail"><span>Successfull Launch:</span> {(val.launch_success === true) ? 'true' : 'false'}</p>
+                <p className="prod_detail"><span>Successfull Landing:</span> {(val.rocket.first_stage.cores[0].land_success === true) ? 'true' : 'false'}</p>
               </div>
           ))}
       </div>
