@@ -18,3 +18,7 @@ to run on server side rendering run following command
  > node server/index.js 
 
 now open http://localhost:5050/ 
+
+
+Demo can be seen on the following URL
+https://myreact-ssr.herokuapp.com/
